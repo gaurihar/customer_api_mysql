@@ -1,0 +1,14 @@
+-- DROP DATABASE IF EXISTS UserInfo;
+
+
+-- CREATE DATABASE UserInfo;
+
+USE UserInfo;
+
+CREATE TABLE IF NOT EXISTS user_info(
+    id  INT AUTO_INCREMENT PRIMARY KEY ,
+    first_name VARCHAR(20),
+    last_name VARCHAR(20),
+    email_id    VARCHAR(100) NOT NULL UNIQUE,
+    contact_no  VARCHAR(10) NOT NULL UNIQUE
+)ENGINE = INNODB CHARACTER SET=utf8;
